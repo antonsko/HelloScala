@@ -34,3 +34,14 @@ for{
 //} yield (i)
 
 Set("a", "b", "b")
+
+val numbers = List(5, 4, 8, 6, 2)
+val startValue = 1
+numbers.fold(startValue) {
+  (z, i) => z + i
+}
+
+val s0 = Stream.cons(1, Stream.empty)
+val s1 = Stream(1,2,3)
+val s2 = List(1,2,3).toStream
+

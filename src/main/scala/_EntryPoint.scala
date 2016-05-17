@@ -22,16 +22,18 @@ object EntryPoint {
 
     new Configs().run()
 
-    new DependencyInjection().run()
+    new DependencyInjection().run
 
-    new SqlConnection().run()
+    new SqlConnection().run
 
-    new Currying().run()
+    new Currying().run
 
-    new PatternMatching().run()
+    new PatternMatching().run
 
-    new Lists().run()
+    new Lists().run
 
     new Collections().run
+
+    new LazyEvaluation().run
   }
 }

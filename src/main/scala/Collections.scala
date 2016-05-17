@@ -7,7 +7,7 @@ class Collections() {
     val r: Range = 1 until 10 by 2 // to=inclusive / until=exclusive
 
     val a = Array(1,2,3,44)
-    a map (x => x * 2)
+    val m = a map (x => x * 2)
 
     val s = "Tesadasd"
     s filter (c => c.isUpper)
@@ -40,5 +40,20 @@ class Collections() {
     (1 to 6) toSet
 
     Iterable
+
+    val romanNumerals = Map("I" -> 1, "V" -> 5, "X" -> 10)
+    // romanNumerals ("I") //throws exception
+    romanNumerals get "I"
+
+    val romanNumeralsWithDefault = Map("I" -> 1, "V" -> 5, "X" -> 10) withDefaultValue "Unknown"
+    romanNumeralsWithDefault("II")
+
+    val fruits : List[String] = List("oranges", "mangoes", "apples", "pears")
+    fruits sortWith (_.length < _.length)  // word length order predicate
+    fruits.sorted // Lexicographic order
+
+    // params example
+    class Poly(terms: (Int, Double)*)
+    new Poly(3-> 2.0, 1 -> 7.0, 0 -> 2.3)
   }
 }
